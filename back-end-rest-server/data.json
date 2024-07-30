@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "name": "Scott Ramsey",
+      "email": "scottr@abc.com",
+      "password": "scottr",
+      "id": 2
+    },
+    {
+      "name": "asfdasdf",
+      "email": "asdfasf",
+      "password": "asdfasfd",
+      "id": 3
+    },
+    {
+      "name": "asdfasdf",
+      "email": "sadfsaf",
+      "password": "asdfasfd",
+      "id": 4
+    },
+    {
+      "name": "sadfasdf",
+      "email": "asdfasfd",
+      "password": "asdfasdfsad",
+      "id": 5
+    },
+    {
+      "name": "asdfasfd",
+      "email": "asdfasfd",
+      "password": "asdfasdf",
+      "id": 6
+    }
+  ]
+}
