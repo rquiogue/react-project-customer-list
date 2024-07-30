@@ -1,19 +1,27 @@
 import React from 'react'
+import { useState } from 'react';
 
 const CustomerList = (props) => {
   const {
     customerList,
     selectCustomer,
     customerSelectedID,
-    page,
-    perPage,
-    changePerPage,
-    changePage,
-    searchText,
-    changeSearchText
   } = props
+
+  const [page, setPage] = useState(1);
+
+  const [perPage, setPerPage] = useState(10);
+  const changePerPage = (e) => {setPerPage(e.target.value); console.log(e.target.value)};
+
+  const [searchText, setSearchText] = useState('');
+  const changeSearchText = (e) => setSearchText(e.target.value);
+
   const startingIndex = (page - 1) * perPage
   const finalIndex = Number(startingIndex) + Number(perPage)
+
+  const changePage = (direction) => {
+    setPage((prev) => prev + direction);
+  }
 
   const filterBasedOnSearch = (customer) => {
     const customerLowerCaseName = customer.name.toLowerCase();

@@ -22,17 +22,9 @@ function App() {
 
   const [email, setEmail] = useState('');
   const changeEmail = (e) => setEmail(e.target.value);
-
+  
   const [password, setPassword] = useState('');
   const changePassword = (e) => setPassword(e.target.value);
-
-  const [perPage, setPerPage] = useState(10);
-  const changePerPage = (e) => {setPerPage(e.target.value); console.log(e.target.value)};
-
-  const [page, setPage] = useState(1);
-
-  const [searchText, setSearchText] = useState('');
-  const changeSearchText = (e) => setSearchText(e.target.value);
 
   /*
    *  This section is for the customer selection feature
@@ -85,7 +77,7 @@ function App() {
 
   useEffect(() => {
     getCustomers()
-  }, [customerSelectedID, page, perPage])
+  }, [customerSelectedID])
 
   const getCustomers = () => {
     getAll(setCustomerList)
@@ -129,10 +121,6 @@ function App() {
     return maxid + 1;
   }
 
-  function changePage(direction){
-    setPage((prev) => prev + direction);
-  }
-
 
 
   return (
@@ -141,12 +129,6 @@ function App() {
         customerList={customerList} 
         selectCustomer={(id) => selectCustomer(id)} 
         customerSelectedID={customerSelectedID}
-        page={page}
-        perPage={perPage}
-        changePerPage={(e) => changePerPage(e)}
-        changePage={(direction) => changePage(direction)}
-        searchText={searchText}
-        changeSearchText={changeSearchText}
       />
 
       <CustomerAddUpdateForm
