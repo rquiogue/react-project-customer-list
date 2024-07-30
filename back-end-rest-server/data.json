@@ -1,10 +1,10 @@
 {
   "customers": [
     {
-      "id": 1,
       "name": "Siward Pee",
       "email": "spee0@unicef.org",
-      "password": "jF0_Xbhd"
+      "password": "jF0_Xbhd",
+      "id": 1
     },
     {
       "id": 2,
