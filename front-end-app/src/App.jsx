@@ -33,6 +33,8 @@ function App() {
     getAll(setCustomerList)
   }
 
+  const [colorPicked, setColor] = useState("#0077b6");
+
 
 
   return (
@@ -42,6 +44,8 @@ function App() {
         customerList={customerList} 
         selectCustomer={(id) => selectCustomer(id)} 
         customerSelectedID={customerSelectedID}
+        colorPicked={colorPicked}
+        setColor={setColor}
       />
 
       <CustomerAddUpdateForm
@@ -51,6 +55,7 @@ function App() {
         getCustomers={() => getCustomers()}
         setCustomerSelectedID={setCustomerSelectedID}
         setIsCustomerSelected={setIsCustomerSelected}
+        colorPicked={colorPicked}
       />
     </div>
   )

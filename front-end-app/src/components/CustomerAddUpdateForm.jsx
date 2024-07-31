@@ -13,7 +13,8 @@ const CustomerAddUpdateForm = (props) => {
     customerList,
     getCustomers,
     setCustomerSelectedID,
-    setIsCustomerSelected
+    setIsCustomerSelected,
+    colorPicked
   } = props
 
 
@@ -106,7 +107,7 @@ const CustomerAddUpdateForm = (props) => {
           </div>
 
           <div className='buttons'>
-            <button className='form-button save' onClick={onSaveClick}>Save</button>
+            <button className='form-button save' style={{backgroundColor: colorPicked}} onClick={onSaveClick}>Save</button>
             <button className='form-button delete' onClick={onDeleteClick}>Delete</button>
             <button className='form-button cancel' onClick={clearSelection}>Cancel</button>
           </div>

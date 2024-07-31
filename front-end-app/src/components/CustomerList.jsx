@@ -6,11 +6,11 @@ const CustomerList = (props) => {
     customerList,
     selectCustomer,
     customerSelectedID,
+    colorPicked,
+    setColor
   } = props
 
   const [page, setPage] = useState(1);
-
-  const [colorPicked, setColor] = useState("#0077b6");
 
   const [perPage, setPerPage] = useState(10);
   const changePerPage = (e) => {setPerPage(e.target.value); console.log(e.target.value)};
