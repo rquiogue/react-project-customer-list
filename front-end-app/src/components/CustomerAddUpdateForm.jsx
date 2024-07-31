@@ -90,28 +90,25 @@ const CustomerAddUpdateForm = (props) => {
 
   return (
     <div className='container'>
-        <h1 className='header'>{props.isCustomerSelected ? 'Update' : 'Add'}</h1>
+        <h1 className='title'>{isCustomerSelected ? 'Update' : 'Add'}</h1>
         <div className='form'>
-          <table className='form-table'>
-            <tbody>
-              <tr className='form-table-row'>
-                <td>Name:</td>
-                <td><input type="text" placeholder='Customer Name' value={name} onChange={changeName}/></td>
-              </tr>
-              <tr>
-                <td>Email:</td>
-                <td><input type="text" placeholder='name@company.com' value={email} onChange={changeEmail}/></td>
-              </tr>
-              <tr>
-                <td>Pass:</td>
-                <td><input type="text" placeholder='Password' value={password} onChange={changePassword}/></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="input-group">
+            <div className='label'>Name: </div>
+            <input type="text" className='text-input' placeholder='Customer Name' value={name} onChange={changeName}/>
+          </div>
+          <div className="input-group">
+            <div className='label'>Email: </div>
+            <input type="text" className='text-input' placeholder='name@company.com' value={email} onChange={changeEmail}/>
+          </div>
+          <div className="input-group">
+            <div className='label'>Password:</div>
+            <input type="text" className='text-input' placeholder='Password' value={password} onChange={changePassword}/>
+          </div>
+
           <div className='buttons'>
-            <button onClick={onDeleteClick}>Delete</button>
-            <button onClick={onSaveClick}>Save</button>
-            <button onClick={clearSelection}>Cancel</button>
+            <button className='form-button save' onClick={onSaveClick}>Save</button>
+            <button className='form-button delete' onClick={onDeleteClick}>Delete</button>
+            <button className='form-button cancel' onClick={clearSelection}>Cancel</button>
           </div>
         </div>
       </div>

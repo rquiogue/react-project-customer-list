@@ -1,22 +1,16 @@
 {
   "customers": [
     {
-      "name": "Siward Pee",
-      "email": "spee0@unicef.org",
-      "password": "jF0_Xbhd",
-      "id": 1
-    },
-    {
       "id": 2,
       "name": "Brandice Comoletti",
       "email": "bcomoletti1@seesaa.net",
       "password": "mV5&EG'BJ2"
     },
     {
-      "id": 3,
-      "name": "Brien Vinnicombe",
+      "name": "Brien Vinnicombe updated",
       "email": "bvinnicombe2@moonfruit.com",
-      "password": "bZ7{ULK3\\"
+      "password": "bZ7{ULK3\\",
+      "id": 3
     },
     {
       "id": 4,
@@ -5993,6 +5987,24 @@
       "name": "Waverley Mongeot",
       "email": "wmongeotrr@facebook.com",
       "password": "gT4}Af2wJ)"
+    },
+    {
+      "name": "Ryan Quiogue",
+      "email": "ryan.quiogue@adp.com",
+      "password": "password",
+      "id": 1001
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 1002
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 1003
     }
   ]
 }

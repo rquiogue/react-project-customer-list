@@ -6,6 +6,7 @@ import CustomerAddUpdateForm from './components/CustomerAddUpdateForm';
 import {
   getAll,
 } from './restdb'
+import Header from './components/Header';
 
 function App() {
   const [customerList, setCustomerList] = useState([]);
@@ -36,6 +37,8 @@ function App() {
 
   return (
     <div className='wrapper'>
+      <Header/>
+
       <CustomerList 
         customerList={customerList} 
         selectCustomer={(id) => selectCustomer(id)} 
