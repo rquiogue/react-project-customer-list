@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CustomerListScreen = () => {
+const CustomerListScreen = (props) => {
   return (
     <div>CustomerListScreen</div>
   )
