@@ -53,7 +53,7 @@ const CustomerList = (props) => {
             <tr>
               <th style={{backgroundColor: colorPicked}}>Name</th>
               <th style={{backgroundColor: colorPicked}}>Email</th>
-              <th style={{backgroundColor: colorPicked}}>Pass</th>
+              <th style={{backgroundColor: colorPicked}}>Password</th>
             </tr>
           </thead>
           <tbody>
