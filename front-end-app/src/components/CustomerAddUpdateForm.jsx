@@ -5,6 +5,7 @@ import {
   put,
   deleteById
 } from '../restdb'
+import { useNavigate } from "react-router-dom";
 
 const CustomerAddUpdateForm = (props) => {
   const {
@@ -16,7 +17,8 @@ const CustomerAddUpdateForm = (props) => {
     setIsCustomerSelected,
     colorPicked
   } = props
-
+  
+  const navigate = useNavigate();
 
   // Setting up state and onChange handlers for the form fields
   const [name, setName] = useState('');
@@ -49,8 +51,8 @@ const CustomerAddUpdateForm = (props) => {
     }
 
     deleteById(customerSelectedID);
-    clearSelection();
     getCustomers();
+    clearSelection();
   }
 
   const onSaveClick = () => {
@@ -87,6 +89,7 @@ const CustomerAddUpdateForm = (props) => {
     setName('');
     setEmail('');
     setPassword('');
+    navigate("/");
   }
 
   return (

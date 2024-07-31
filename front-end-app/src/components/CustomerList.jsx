@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CustomerList = (props) => {
   const {
@@ -7,7 +8,8 @@ const CustomerList = (props) => {
     selectCustomer,
     customerSelectedID,
     colorPicked,
-    setColor
+    setColor,
+    isCustomerSelected
   } = props
 
   const [page, setPage] = useState(1);
@@ -78,6 +80,12 @@ const CustomerList = (props) => {
 
           Color:
           <input className='color-picker' type="color" value={colorPicked} onChange={e => {setColor(e.target.value); console.log(e.target.value)}} />
+        </div>
+
+        <div className='add-update-button'>
+          <Link to={'/form'}>
+            <button className='form-button save' style={{backgroundColor: colorPicked}}>{isCustomerSelected ? 'Update' : 'Add'}</button>
+          </Link>
         </div>
       </div>
   )

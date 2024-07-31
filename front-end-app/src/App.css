@@ -26,6 +26,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+.title {
+  margin-top: 30px;
+}
+
 #customers {
   border-collapse: collapse;
   width: 100%;
@@ -197,4 +201,10 @@ input[type=number] {
   border: none;
   cursor: pointer;
   margin-left: 10px;
+}
+
+.add-update-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }

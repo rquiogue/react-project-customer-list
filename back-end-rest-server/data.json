@@ -1,10 +1,10 @@
 {
   "customers": [
     {
-      "id": 2,
       "name": "Brandice Comoletti",
       "email": "bcomoletti1@seesaa.net",
-      "password": "mV5&EG'BJ2"
+      "password": "mV5&EG'BJ2",
+      "id": 2
     },
     {
       "name": "Brien Vinnicombe",
@@ -5989,12 +5989,6 @@
       "password": "gT4}Af2wJ)"
     },
     {
-      "name": "Ryan Quiogue",
-      "email": "ryan.quiogue@adp.com",
-      "password": "password",
-      "id": 1001
-    },
-    {
       "name": "",
       "email": "",
       "password": "",
@@ -6005,6 +5999,12 @@
       "email": "",
       "password": "",
       "id": 1003
+    },
+    {
+      "name": "Ryan Quiogue",
+      "email": "ryan.quiogue@adp.com",
+      "password": "password",
+      "id": 1004
     }
   ]
 }

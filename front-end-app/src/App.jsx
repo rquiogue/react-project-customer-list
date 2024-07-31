@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import CustomerList from './components/CustomerList';
 import CustomerAddUpdateForm from './components/CustomerAddUpdateForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import {
   getAll,
 } from './restdb'
-import Header from './components/Header';
 
 function App() {
   const [customerList, setCustomerList] = useState([]);
@@ -38,26 +38,35 @@ function App() {
 
 
   return (
-    <div className='wrapper'>
+    <Router>
+      <div className='wrapper'>
 
-      <CustomerList 
-        customerList={customerList} 
-        selectCustomer={(id) => selectCustomer(id)} 
-        customerSelectedID={customerSelectedID}
-        colorPicked={colorPicked}
-        setColor={setColor}
-      />
+        <Routes>
+          <Route path='/' element={
+          <CustomerList 
+            customerList={customerList} 
+            selectCustomer={(id) => selectCustomer(id)} 
+            customerSelectedID={customerSelectedID}
+            isCustomerSelected={isCustomerSelected}
+            colorPicked={colorPicked}
+            setColor={setColor}
+          />}
+          />
 
-      <CustomerAddUpdateForm
-        isCustomerSelected={isCustomerSelected}
-        customerSelectedID={customerSelectedID}
-        customerList={customerList}
-        getCustomers={() => getCustomers()}
-        setCustomerSelectedID={setCustomerSelectedID}
-        setIsCustomerSelected={setIsCustomerSelected}
-        colorPicked={colorPicked}
-      />
-    </div>
+          <Route path='/form' element={<CustomerAddUpdateForm
+            isCustomerSelected={isCustomerSelected}
+            customerSelectedID={customerSelectedID}
+            customerList={customerList}
+            getCustomers={() => getCustomers()}
+            setCustomerSelectedID={setCustomerSelectedID}
+            setIsCustomerSelected={setIsCustomerSelected}
+            colorPicked={colorPicked}
+              />}
+          />
+
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
