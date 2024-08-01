@@ -9,7 +9,7 @@ import {
 } from './restdb'
 
 function App() {
-  const [customerList, setCustomerList] = useState([]);
+  const [customerList, setCustomerList] = useState([{'id': 1, name: 'Connect API', email: 'Connect API', password: 'Connect API'}]);
   const [customerSelectedID, setCustomerSelectedID] = useState(-1);
   const [isCustomerSelected, setIsCustomerSelected] = useState(false);
   
