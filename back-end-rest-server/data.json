@@ -1,12 +1,6 @@
 {
   "customers": [
     {
-      "name": "Brandice Comoletti",
-      "email": "bcomoletti1@seesaa.net",
-      "password": "mV5&EG'BJ2",
-      "id": 2
-    },
-    {
       "name": "Brien Vinnicombe",
       "email": "bvinnicombe2@moonfruit.com",
       "password": "bZ7{ULK3\\",
@@ -6005,6 +5999,18 @@
       "email": "ryan.quiogue@adp.com",
       "password": "password",
       "id": 1004
+    },
+    {
+      "name": "Bob Myers",
+      "email": "bobbym@abc.com",
+      "password": "bobbym",
+      "id": 1005
+    },
+    {
+      "name": "Christina Jung",
+      "email": "cjung@gmail.com",
+      "password": "quiwroiqwer",
+      "id": 1006
     }
   ]
 }
