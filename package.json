@@ -1,0 +1,19 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd ./front-end-app && npm run dev",
+    "start:backend": "cd ./back-end-rest-server && npm run start",
+    "build": "npm i && concurrently \"npm run build:frontend\" \"npm run build:backend\"",
+    "build:frontend": "cd ./front-end-app && npm i",
+    "build:backend": "cd ./back-end-rest-server && npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrency": "^0.1.4"
+  }
+}
